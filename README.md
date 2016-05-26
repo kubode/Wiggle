@@ -1,26 +1,35 @@
 WiggleFrameLayout
 ========
 
+[![GitHub release](https://img.shields.io/github/release/kubode/WiggleFrameLayout.svg?maxAge=2592000)]()
+
 ![Image](https://github.com/kubode/WiggleFrameLayout/raw/master/img/image.gif)
 
 Installation
 --------
 
-Gradle
+Add to `build.gradle`.
+
 ```gradle
-compile 'com.github.kubode:wiggle-frame-layout:1.0.0'
+repositories {
+    jcenter()
+}
+dependencies {
+    compile "com.github.kubode:wiggle-frame-layout:${latestVersion}"
+}
 ```
 
 Usage
 --------
 
 You can use `WiggleFrameLayout` in the same way as `FrameLayout`.
+
 ```xml
 <com.github.kubode.widget.WiggleFrameLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    android:foreground="#80ffffff">
+    android:foreground="#80ffffff" />
 ```
 
 Note: `WiggleFrameLayout` uses `translationX` and `translationY`. So you can't use animation of `translationX` and `translationY`.
@@ -29,7 +38,7 @@ License
 --------
 
 ```
-Copyright 2015 Masatoshi Kubode
+Copyright 2016 Masatoshi Kubode
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
