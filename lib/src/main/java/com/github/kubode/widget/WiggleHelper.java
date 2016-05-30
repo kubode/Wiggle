@@ -1,50 +1,77 @@
 package com.github.kubode.widget;
 
-import android.support.annotation.MainThread;
-import android.support.annotation.NonNull;
 import android.view.Choreographer;
 import android.view.View;
 
 /**
- * Created by mkubode on 2016/05/30.
+ * Helper class for implement wiggle motion.
+ * <p/>
+ * There are two ways of implement wiggle motion using {@code WiggleHelper}:
+ * use in extended view class and use as {@link View.OnAttachStateChangeListener}.
+ * <p/>
+ * Extend view class example:
+ * <pre>{@code
+ * public class WiggleView extends View {
+ *     private final WiggleHelper helper = new WiggleHelper();
+ *     // Constructors...
+ *     &#64;Override
+ *     protected void onAttachedToWindow() {
+ *         super.onAttachedToWindow();
+ *         helper.onViewAttachedToWindow(this);
+ *     }
+ *     &#64;Override
+ *     protected void onDetachedFromWindow() {
+ *         helper.onViewDetachedFromWindow(this);
+ *         super.onDetachedFromWindow();
+ *     }
+ * }
+ * }</pre>
+ * OnAttachStateChangeListener example:
+ * <pre>{@code
+ * View view = findViewById(R.id.wiggle);
+ * view.addOnAttachStateChangeListener(new WiggleHelper());
+ * }</pre>
+ * Note: Don't share same {@code WiggleHelper} instance with multiple views.
  */
-public class WiggleHelper implements Choreographer.FrameCallback {
+public class WiggleHelper implements View.OnAttachStateChangeListener {
 
     private final Choreographer choreographer = Choreographer.getInstance();
-    private final View view;
     private final int[] location = new int[2];
+
     private boolean isInitialized;
+    private View view;
 
-    @MainThread
-    public WiggleHelper(@NonNull View view) {
-        this.view = view;
-    }
-
-    @Override
-    public void doFrame(long frameTimeNanos) {
-        if (isInitialized) {
-            int oldX = location[0];
-            int oldY = location[1];
-            injectLocation();
-            view.setTranslationX(oldX - location[0]);
-            view.setTranslationY(oldY - location[1]);
-        } else {
-            injectLocation();
-            isInitialized = true;
+    private final Choreographer.FrameCallback callback = new Choreographer.FrameCallback() {
+        @Override
+        public void doFrame(long frameTimeNanos) {
+            if (isInitialized) {
+                int oldX = location[0];
+                int oldY = location[1];
+                injectLocation();
+                view.setTranslationX(oldX - location[0]);
+                view.setTranslationY(oldY - location[1]);
+            } else {
+                injectLocation();
+                isInitialized = true;
+            }
+            choreographer.postFrameCallback(this);
         }
-        choreographer.postFrameCallback(this);
-    }
+    };
 
     private void injectLocation() {
         ((View) view.getParent()).getLocationInWindow(location);
     }
 
-    public void onAttachedToWindow() {
+    @Override
+    public void onViewAttachedToWindow(View v) {
         isInitialized = false;
-        choreographer.postFrameCallback(this);
+        view = v;
+        choreographer.postFrameCallback(callback);
     }
 
-    public void onDetachedFromWindow() {
-        choreographer.removeFrameCallback(this);
+    @Override
+    public void onViewDetachedFromWindow(View v) {
+        view = null;
+        choreographer.removeFrameCallback(callback);
     }
 }

@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 
 public class WiggleFrameLayout extends FrameLayout {
 
-    private final WiggleHelper helper = new WiggleHelper(this);
+    private final WiggleHelper helper = new WiggleHelper();
 
     public WiggleFrameLayout(Context context) {
         super(context);
@@ -31,12 +31,12 @@ public class WiggleFrameLayout extends FrameLayout {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        helper.onAttachedToWindow();
+        helper.onViewAttachedToWindow(this);
     }
 
     @Override
     protected void onDetachedFromWindow() {
-        helper.onDetachedFromWindow();
+        helper.onViewDetachedFromWindow(this);
         super.onDetachedFromWindow();
     }
 }
