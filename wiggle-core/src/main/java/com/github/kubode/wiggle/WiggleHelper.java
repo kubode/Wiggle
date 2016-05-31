@@ -1,4 +1,4 @@
-package com.github.kubode.widget;
+package com.github.kubode.wiggle;
 
 import android.view.Choreographer;
 import android.view.View;

@@ -27,7 +27,7 @@
                 android:text="RelativeLayout"
                 tools:ignore="HardcodedText" />
 
-            <com.github.kubode.widget.WiggleFrameLayout
+            <com.github.kubode.wiggle.WiggleFrameLayout
                 android:layout_width="160dp"
                 android:layout_height="90dp"
                 android:layout_centerHorizontal="true"
@@ -38,9 +38,9 @@
                     android:layout_height="wrap_content"
                     android:text="WiggleFrameLayout"
                     tools:ignore="HardcodedText" />
-            </com.github.kubode.widget.WiggleFrameLayout>
+            </com.github.kubode.wiggle.WiggleFrameLayout>
 
-            <com.github.kubode.widget.WiggleFrameLayout
+            <com.github.kubode.wiggle.WiggleFrameLayout
                 android:layout_width="160dp"
                 android:layout_height="90dp"
                 android:layout_marginTop="120dp"
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:text="WiggleFrameLayout"
                     tools:ignore="HardcodedText" />
-            </com.github.kubode.widget.WiggleFrameLayout>
+            </com.github.kubode.wiggle.WiggleFrameLayout>
 
             <FrameLayout
                 android:layout_width="200dp"
@@ -67,7 +67,7 @@
                     android:text="FrameLayout"
                     tools:ignore="HardcodedText" />
 
-                <com.github.kubode.widget.WiggleFrameLayout
+                <com.github.kubode.wiggle.WiggleFrameLayout
                     android:layout_width="160dp"
                     android:layout_height="90dp"
                     android:layout_gravity="center"
@@ -78,10 +78,10 @@
                         android:layout_height="wrap_content"
                         android:text="WiggleFrameLayout"
                         tools:ignore="HardcodedText" />
-                </com.github.kubode.widget.WiggleFrameLayout>
+                </com.github.kubode.wiggle.WiggleFrameLayout>
             </FrameLayout>
 
-            <com.github.kubode.widget.WiggleFrameLayout
+            <com.github.kubode.wiggle.WiggleFrameLayout
                 android:layout_width="320dp"
                 android:layout_height="280dp"
                 android:layout_centerHorizontal="true"
@@ -94,7 +94,7 @@
                     android:text="WiggleFrameLayout"
                     tools:ignore="HardcodedText" />
 
-                <com.github.kubode.widget.WiggleFrameLayout
+                <com.github.kubode.wiggle.WiggleFrameLayout
                     android:layout_width="280dp"
                     android:layout_height="240dp"
                     android:layout_gravity="center"
@@ -106,7 +106,7 @@
                         android:text="WiggleFrameLayout"
                         tools:ignore="HardcodedText" />
 
-                    <com.github.kubode.widget.WiggleFrameLayout
+                    <com.github.kubode.wiggle.WiggleFrameLayout
                         android:layout_width="240dp"
                         android:layout_height="200dp"
                         android:layout_gravity="center"
@@ -118,7 +118,7 @@
                             android:text="WiggleFrameLayout"
                             tools:ignore="HardcodedText" />
 
-                        <com.github.kubode.widget.WiggleFrameLayout
+                        <com.github.kubode.wiggle.WiggleFrameLayout
                             android:layout_width="200dp"
                             android:layout_height="160dp"
                             android:layout_gravity="center"
@@ -130,7 +130,7 @@
                                 android:text="WiggleFrameLayout"
                                 tools:ignore="HardcodedText" />
 
-                            <com.github.kubode.widget.WiggleFrameLayout
+                            <com.github.kubode.wiggle.WiggleFrameLayout
                                 android:layout_width="160dp"
                                 android:layout_height="120dp"
                                 android:layout_gravity="center"
@@ -141,11 +141,11 @@
                                     android:layout_height="wrap_content"
                                     android:text="WiggleFrameLayout"
                                     tools:ignore="HardcodedText" />
-                            </com.github.kubode.widget.WiggleFrameLayout>
-                        </com.github.kubode.widget.WiggleFrameLayout>
-                    </com.github.kubode.widget.WiggleFrameLayout>
-                </com.github.kubode.widget.WiggleFrameLayout>
-            </com.github.kubode.widget.WiggleFrameLayout>
+                            </com.github.kubode.wiggle.WiggleFrameLayout>
+                        </com.github.kubode.wiggle.WiggleFrameLayout>
+                    </com.github.kubode.wiggle.WiggleFrameLayout>
+                </com.github.kubode.wiggle.WiggleFrameLayout>
+            </com.github.kubode.wiggle.WiggleFrameLayout>
         </RelativeLayout>
     </ScrollView>
 
@@ -175,7 +175,7 @@
                 android:text="RelativeLayout"
                 tools:ignore="HardcodedText" />
 
-            <com.github.kubode.widget.WiggleFrameLayout
+            <com.github.kubode.wiggle.WiggleFrameLayout
                 android:layout_width="160dp"
                 android:layout_height="90dp"
                 android:layout_centerVertical="true"
@@ -186,9 +186,9 @@
                     android:layout_height="wrap_content"
                     android:text="WiggleFrameLayout"
                     tools:ignore="HardcodedText" />
-            </com.github.kubode.widget.WiggleFrameLayout>
+            </com.github.kubode.wiggle.WiggleFrameLayout>
 
-            <com.github.kubode.widget.WiggleFrameLayout
+            <com.github.kubode.wiggle.WiggleFrameLayout
                 android:layout_width="160dp"
                 android:layout_height="90dp"
                 android:layout_marginLeft="200dp"
@@ -200,7 +200,7 @@
                     android:layout_height="wrap_content"
                     android:text="WiggleFrameLayout"
                     tools:ignore="HardcodedText" />
-            </com.github.kubode.widget.WiggleFrameLayout>
+            </com.github.kubode.wiggle.WiggleFrameLayout>
 
             <FrameLayout
                 android:layout_width="200dp"
@@ -216,7 +216,7 @@
                     android:text="FrameLayout"
                     tools:ignore="HardcodedText" />
 
-                <com.github.kubode.widget.WiggleFrameLayout
+                <com.github.kubode.wiggle.WiggleFrameLayout
                     android:layout_width="160dp"
                     android:layout_height="90dp"
                     android:layout_gravity="center"
@@ -227,10 +227,10 @@
                         android:layout_height="wrap_content"
                         android:text="WiggleFrameLayout"
                         tools:ignore="HardcodedText" />
-                </com.github.kubode.widget.WiggleFrameLayout>
+                </com.github.kubode.wiggle.WiggleFrameLayout>
             </FrameLayout>
 
-            <com.github.kubode.widget.WiggleFrameLayout
+            <com.github.kubode.wiggle.WiggleFrameLayout
                 android:layout_width="320dp"
                 android:layout_height="280dp"
                 android:layout_centerVertical="true"
@@ -244,7 +244,7 @@
                     android:text="WiggleFrameLayout"
                     tools:ignore="HardcodedText" />
 
-                <com.github.kubode.widget.WiggleFrameLayout
+                <com.github.kubode.wiggle.WiggleFrameLayout
                     android:layout_width="280dp"
                     android:layout_height="240dp"
                     android:layout_gravity="center"
@@ -256,7 +256,7 @@
                         android:text="WiggleFrameLayout"
                         tools:ignore="HardcodedText" />
 
-                    <com.github.kubode.widget.WiggleFrameLayout
+                    <com.github.kubode.wiggle.WiggleFrameLayout
                         android:layout_width="240dp"
                         android:layout_height="200dp"
                         android:layout_gravity="center"
@@ -268,7 +268,7 @@
                             android:text="WiggleFrameLayout"
                             tools:ignore="HardcodedText" />
 
-                        <com.github.kubode.widget.WiggleFrameLayout
+                        <com.github.kubode.wiggle.WiggleFrameLayout
                             android:layout_width="200dp"
                             android:layout_height="160dp"
                             android:layout_gravity="center"
@@ -280,7 +280,7 @@
                                 android:text="WiggleFrameLayout"
                                 tools:ignore="HardcodedText" />
 
-                            <com.github.kubode.widget.WiggleFrameLayout
+                            <com.github.kubode.wiggle.WiggleFrameLayout
                                 android:layout_width="160dp"
                                 android:layout_height="120dp"
                                 android:layout_gravity="center"
@@ -291,11 +291,11 @@
                                     android:layout_height="wrap_content"
                                     android:text="WiggleFrameLayout"
                                     tools:ignore="HardcodedText" />
-                            </com.github.kubode.widget.WiggleFrameLayout>
-                        </com.github.kubode.widget.WiggleFrameLayout>
-                    </com.github.kubode.widget.WiggleFrameLayout>
-                </com.github.kubode.widget.WiggleFrameLayout>
-            </com.github.kubode.widget.WiggleFrameLayout>
+                            </com.github.kubode.wiggle.WiggleFrameLayout>
+                        </com.github.kubode.wiggle.WiggleFrameLayout>
+                    </com.github.kubode.wiggle.WiggleFrameLayout>
+                </com.github.kubode.wiggle.WiggleFrameLayout>
+            </com.github.kubode.wiggle.WiggleFrameLayout>
         </RelativeLayout>
     </HorizontalScrollView>
 </LinearLayout>
