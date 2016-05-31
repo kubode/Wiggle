@@ -1,10 +1,12 @@
-package com.github.kubode.wiggle;
+package com.github.kubode.wiggle.framelayout;
 
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
+
+import com.github.kubode.wiggle.WiggleHelper;
 
 public class WiggleFrameLayout extends FrameLayout {
 

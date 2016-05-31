@@ -1,1 +1,1 @@
-include ':sample', ':core', ':wiggle-framelayout'
+include ':sample', ':core', ':framelayout'

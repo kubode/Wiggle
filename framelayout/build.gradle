@@ -1,19 +1,15 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion versions.compileSdkVersion
     buildToolsVersion versions.buildToolsVersion
 
     defaultConfig {
-        applicationId 'com.github.kubode.wiggle.sample'
         minSdkVersion versions.minSdkVersion
         targetSdkVersion versions.targetSdkVersion
-        versionCode 1
-        versionName '1.0'
     }
 }
 
 dependencies {
-    compile project(':framelayout')
-    compile "com.android.support:appcompat-v7:${versions.support}"
+    compile project(':core')
 }
