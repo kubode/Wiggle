@@ -4,11 +4,13 @@ import android.view.Choreographer;
 import android.view.View;
 
 /**
+ * <p>
  * Helper class for implement wiggle motion.
- * <p/>
+ * </p>
+ * <p>
  * There are two ways of implement wiggle motion using {@code WiggleHelper}:
  * use in extended view class and use as {@link View.OnAttachStateChangeListener}.
- * <p/>
+ * </p>
  * Extend view class example:
  * <pre>{@code
  * public class WiggleView extends View {
