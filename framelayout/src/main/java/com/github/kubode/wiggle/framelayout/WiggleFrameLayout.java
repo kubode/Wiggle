@@ -8,6 +8,11 @@ import android.widget.FrameLayout;
 
 import com.github.kubode.wiggle.WiggleHelper;
 
+/**
+ * Wiggle motion {@link FrameLayout}.
+ *
+ * @see WiggleHelper
+ */
 public class WiggleFrameLayout extends FrameLayout {
 
     private final WiggleHelper helper = new WiggleHelper();
