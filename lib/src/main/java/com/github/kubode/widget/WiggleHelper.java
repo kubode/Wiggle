@@ -10,6 +10,7 @@ import android.view.View;
  * <p>
  * There are two ways of implement wiggle motion using {@code WiggleHelper}:
  * use in extended view class and use as {@link View.OnAttachStateChangeListener}.
+ * Constructor must be called from a thread that already has a Looper associated with it.
  * </p>
  * Extend view class example:
  * <pre>{@code
