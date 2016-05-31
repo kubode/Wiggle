@@ -16,6 +16,8 @@ allprojects {
     repositories {
         jcenter()
     }
+    group 'com.github.kubode.wiggle'
+    version '1.2.0'
 }
 
 task clean(type: Delete) {
