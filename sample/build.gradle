@@ -5,7 +5,7 @@ android {
     buildToolsVersion '23.0.3'
 
     defaultConfig {
-        applicationId 'com.github.kubode.wiggleframelayout'
+        applicationId 'com.github.kubode.wiggle.sample'
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
