@@ -1,0 +1,44 @@
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    from javadoc.destinationDir
+    classifier = 'javadoc'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+        }
+    }
+}
+
+bintray {
+    user = System.env.BINTRAY_USER ?: bintrayUser
+    key = System.env.BINTRAY_KEY ?: bintrayKey
+    publications = ['maven']
+    pkg {
+        repo = 'maven'
+        name = "${project.group}:${project.name}"
+        desc = project.description
+        websiteUrl = 'https://github.com/kubode/Wiggle'
+        issueTrackerUrl = 'https://github.com/kubode/Wiggle/issues'
+        vcsUrl = 'https://github.com/kubode/Wiggle.git'
+        licenses = ['Apache-2.0']
+        labels = ['android', 'aar', 'view']
+        publicDownloadNumbers = true
+        githubRepo = 'kubode/Wiggle'
+        githubReleaseNotesFile = 'CHANGELOG.md'
+        version.name = project.version
+    }
+}
