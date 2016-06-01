@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 
+description = 'Wiggle motion FrameLayout.'
+
 android {
     compileSdkVersion versions.compileSdkVersion
     buildToolsVersion versions.buildToolsVersion

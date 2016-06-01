@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+description = 'Wiggle motion sample.'
+
 android {
     compileSdkVersion versions.compileSdkVersion
     buildToolsVersion versions.buildToolsVersion
