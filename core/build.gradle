@@ -1,3 +1,7 @@
+plugins {
+    id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.6'
+}
 apply plugin: 'com.android.library'
 
 description = 'Wiggle motion core library.'
@@ -17,3 +21,5 @@ dependencies {
     testCompile "org.robolectric:robolectric:${versions.robolectric}"
     compile "com.android.support:support-annotations:${versions.support}"
 }
+
+apply from: rootProject.file('bintray-upload-android.gradle')

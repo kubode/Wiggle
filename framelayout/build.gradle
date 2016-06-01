@@ -1,3 +1,7 @@
+plugins {
+    id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.6'
+}
 apply plugin: 'com.android.library'
 
 description = 'Wiggle motion FrameLayout.'
@@ -15,3 +19,5 @@ android {
 dependencies {
     compile project(':core')
 }
+
+apply from: rootProject.file('bintray-upload-android.gradle')
