@@ -1,26 +1,23 @@
-WiggleFrameLayout
-========
+Wiggle
+===
 
 [![GitHub release](https://img.shields.io/github/release/kubode/WiggleFrameLayout.svg?maxAge=2592000)]()
 
 ![Image](https://github.com/kubode/WiggleFrameLayout/raw/master/img/image.gif)
 
-Installation
---------
+Usage
+---
 
-Add to `build.gradle`.
+Add dependency to `build.gradle`.
 
 ```gradle
 repositories {
     jcenter()
 }
 dependencies {
-    compile "com.github.kubode:wiggle-frame-layout:${latestVersion}"
+    compile "com.github.kubode.wiggle:framelayout:${latestVersion}"
 }
 ```
-
-Usage
---------
 
 You can use `WiggleFrameLayout` in the same way as `FrameLayout`.
 
@@ -32,7 +29,16 @@ You can use `WiggleFrameLayout` in the same way as `FrameLayout`.
     android:foreground="#80ffffff" />
 ```
 
-Note: `WiggleFrameLayout` uses `translationX` and `translationY`. So you can't use animation of `translationX` and `translationY`.
+Note: `WiggleFrameLayout` uses `translationX` and `translationY`.
+So you can't use animation of `translationX` and `translationY`.
+
+If you implement wiggle motion yourself using `WiggleHelper`, add dependency `core` rather than `framelayout`.
+
+```gradle
+dependencies {
+    compile "com.github.kubode.wiggle:core:${latestVersion}"
+}
+```
 
 License
 --------
