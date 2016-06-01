@@ -22,7 +22,7 @@ dependencies {
 You can use `WiggleFrameLayout` in the same way as `FrameLayout`.
 
 ```xml
-<com.github.kubode.widget.WiggleFrameLayout
+<com.github.kubode.wiggle.framelayout.WiggleFrameLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
