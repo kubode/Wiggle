@@ -1,9 +1,9 @@
 Wiggle
 ===
 
-[![GitHub release](https://img.shields.io/github/release/kubode/WiggleFrameLayout.svg?maxAge=2592000)]()
+[![GitHub release](https://img.shields.io/github/release/kubode/Wiggle.svg?maxAge=2592000)]()
 
-![Image](https://github.com/kubode/WiggleFrameLayout/raw/master/img/image.gif)
+![Image](https://github.com/kubode/Wiggle/raw/master/img/image.gif)
 
 Usage
 ---
