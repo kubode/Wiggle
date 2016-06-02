@@ -41,7 +41,7 @@ dependencies {
 ```
 
 License
---------
+---
 
 ```
 Copyright 2016 Masatoshi Kubode
