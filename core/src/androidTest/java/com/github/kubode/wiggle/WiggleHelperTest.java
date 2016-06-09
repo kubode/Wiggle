@@ -17,7 +17,7 @@ import static android.support.test.espresso.action.ViewActions.swipeDown;
 import static android.support.test.espresso.action.ViewActions.swipeUp;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static com.github.kubode.wiggle.MyMatchers.withTranslationY;
+import static com.github.kubode.wiggle.MyMatchers.withLastNon0TranslationY;
 import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.lessThan;
 
@@ -34,14 +34,14 @@ public class WiggleHelperTest {
     }
 
     @Test
-    public void translationYGreaterThan0WhenSwipeUp() {
+    public void lastNon0TranslationYGreaterThan0WhenSwipeUp() {
         onView(withId(R.id.scrollView)).perform(swipeUp());
-        onView(withId(R.id.view)).check(matches(withTranslationY(greaterThan(0f))));
+        onView(withId(R.id.view)).check(matches(withLastNon0TranslationY(greaterThan(0f))));
     }
 
     @Test
-    public void translationYLessThan0WhenSwipeDown() {
+    public void lastNon0TranslationYLessThan0WhenSwipeDown() {
         onView(withId(R.id.scrollView)).perform(swipeDown());
-        onView(withId(R.id.view)).check(matches(withTranslationY(lessThan(0f))));
+        onView(withId(R.id.view)).check(matches(withLastNon0TranslationY(lessThan(0f))));
     }
 }
