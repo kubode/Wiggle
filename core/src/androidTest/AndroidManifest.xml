@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.kubode.wiggle.test">
+
+    <application>
+        <activity android:name="com.github.kubode.wiggle.MockActivity" />
+    </application>
+</manifest>

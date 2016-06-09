@@ -9,12 +9,14 @@ android {
     defaultConfig {
         minSdkVersion versions.minSdkVersion
         targetSdkVersion versions.targetSdkVersion
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
 }
 
 dependencies {
-    testCompile "junit:junit:${versions.junit}"
-    testCompile "org.robolectric:robolectric:${versions.robolectric}"
+    androidTestCompile "com.android.support.test.espresso:espresso-core:${versions.espresso}"
+    androidTestCompile "com.android.support.test:runner:${versions.supporttest}"
+    androidTestCompile "com.android.support.test:rules:${versions.supporttest}"
     compile "com.android.support:support-annotations:${versions.support}"
 }
 
