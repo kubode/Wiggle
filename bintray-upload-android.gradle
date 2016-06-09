@@ -56,8 +56,8 @@ install {
 }
 
 bintray {
-    user = System.env.BINTRAY_USER ?: bintrayUser
-    key = System.env.BINTRAY_KEY ?: bintrayKey
+    user = System.env.BINTRAY_USER ?: 'nouser'
+    key = System.env.BINTRAY_KEY ?: 'nokey'
     configurations = ['archives']
     pkg {
         repo = 'maven'
