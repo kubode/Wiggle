@@ -2,6 +2,7 @@ Wiggle
 ===
 
 [![GitHub release](https://img.shields.io/github/release/kubode/Wiggle.svg?maxAge=2592000)]()
+[![Build Status](https://travis-ci.org/kubode/Wiggle.svg?branch=master)](https://travis-ci.org/kubode/Wiggle)
 
 ![Image](https://github.com/kubode/Wiggle/raw/master/img/image.gif)
 
