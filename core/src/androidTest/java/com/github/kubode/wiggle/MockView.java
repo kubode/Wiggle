@@ -1,10 +1,11 @@
 package com.github.kubode.wiggle;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.View;
+import android.widget.TextView;
 
-public class MockView extends View {
+public class MockView extends TextView {
 
     private final WiggleHelper helper = new WiggleHelper();
 
@@ -30,5 +31,12 @@ public class MockView extends View {
     protected void onDetachedFromWindow() {
         helper.onViewDetachedFromWindow(this);
         super.onDetachedFromWindow();
+    }
+
+    @SuppressLint("SetTextI18n")
+    @Override
+    public void setTranslationY(float translationY) {
+        super.setTranslationY(translationY);
+        setText("translationY=" + translationY);
     }
 }
