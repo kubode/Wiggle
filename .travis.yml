@@ -6,7 +6,7 @@ android:
     - build-tools-23.0.3
     - android-23
     - extra-android-m2repository
-    - sys-img-armeabi-v7a-android-16
+    - sys-img-x86-android-16
   licenses:
     - 'android-sdk-license-.+'
 before_script:
