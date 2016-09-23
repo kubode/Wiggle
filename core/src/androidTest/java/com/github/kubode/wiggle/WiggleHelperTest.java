@@ -1,8 +1,8 @@
 package com.github.kubode.wiggle;
 
+import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.suitebuilder.annotation.LargeTest;
 
 import com.github.kubode.wiggle.test.R;
 
