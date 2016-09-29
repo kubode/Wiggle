@@ -68,7 +68,7 @@ public class WiggleHelper implements View.OnAttachStateChangeListener {
             protected Frame extractFrameToFixPosition(long delayMillis, @NonNull Deque<Frame> frameDeque) {
                 Frame last = frameDeque.getLast();
                 Frame first = frameDeque.getFirst();
-                long diffNanos = first.frameTimeNanos - last.frameTimeNanos;
+                long diffNanos = Math.abs(first.frameTimeNanos - last.frameTimeNanos);
                 long diffMillis = TimeUnit.NANOSECONDS.toMillis(diffNanos);
                 if (diffMillis >= delayMillis) {
                     return frameDeque.pollFirst();
