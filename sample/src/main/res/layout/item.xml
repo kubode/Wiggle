@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="80dp">
+    tools:parentTag="RelativeLayout">
 
     <TextView
         android:id="@+id/frames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Fixed text." />
 
     <TextView
         android:id="@+id/millis"
@@ -18,4 +23,4 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         tools:ignore="RelativeOverlap" />
-</RelativeLayout>
+</merge>
