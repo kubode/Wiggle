@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="delayFrames" format="integer" />
+    <attr name="delayMillis" format="integer" />
+    <declare-styleable name="WiggleHelper">
+        <attr name="delayFrames" />
+        <attr name="delayMillis" />
+    </declare-styleable>
+</resources>
