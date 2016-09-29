@@ -16,6 +16,8 @@ android {
 }
 
 dependencies {
-    compile project(':framelayout')
+    compile project(':core')
+    compile "com.android.support:support-v4:${versions.support}"
     compile "com.android.support:appcompat-v7:${versions.support}"
+    compile "com.android.support:design:${versions.support}"
 }
