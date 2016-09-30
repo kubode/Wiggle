@@ -2,6 +2,7 @@
 
 buildscript {
     ext {
+        // Note: You should change `.travis.yml` if change SDK versions.
         versions = [
                 compileSdkVersion: 24,
                 buildToolsVersion: '24.0.3',
