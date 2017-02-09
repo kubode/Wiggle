@@ -15,24 +15,25 @@ import com.github.kubode.wiggle.WiggleHelper;
  */
 public class WiggleFrameLayout extends FrameLayout {
 
-    private final WiggleHelper helper = new WiggleHelper();
+    private final WiggleHelper helper;
 
     public WiggleFrameLayout(Context context) {
-        super(context);
+        this(context, null);
     }
 
     public WiggleFrameLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
 
     public WiggleFrameLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        helper = new WiggleHelper(context, attrs, defStyleAttr, 0);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public WiggleFrameLayout(Context context, AttributeSet attrs, int defStyleAttr,
-                             int defStyleRes) {
+    public WiggleFrameLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        helper = new WiggleHelper(context, attrs, defStyleAttr, defStyleRes);
     }
 
     @Override
