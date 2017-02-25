@@ -3,13 +3,12 @@ jdk:
   - oraclejdk8
 android:
   components:
-    - tools
     - platform-tools
     - tools
     - build-tools-25.0.2
     - android-25
-    - extra-android-m2repository
     - sys-img-armeabi-v7a-android-16
+    - extra-android-m2repository
   licenses:
     - 'android-sdk-license-.+'
 before_script:
