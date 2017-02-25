@@ -1,5 +1,6 @@
 package com.github.kubode.wiggle;
 
+import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -23,6 +24,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.lessThan;
 
 @RunWith(AndroidJUnit4.class)
+@LargeTest
 public class WiggleHelperTest {
 
     @Rule
