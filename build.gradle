@@ -4,10 +4,10 @@ buildscript {
     ext {
         // Note: You should change `.travis.yml` if change SDK versions.
         versions = [
-                compileSdkVersion: 24,
-                buildToolsVersion: '24.0.3',
+                compileSdkVersion: 25,
+                buildToolsVersion: '25.0.2',
                 minSdkVersion    : 16,
-                targetSdkVersion : 24,
+                targetSdkVersion : 25,
                 support          : '24.2.1',
                 espresso         : '2.2.2',
                 supporttest      : '0.5'
@@ -17,13 +17,13 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.android.tools.build:gradle:2.2.3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.13.0'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.14.0'
     }
 }
 
