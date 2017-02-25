@@ -2,11 +2,6 @@ package com.github.kubode.wiggle;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.AttrRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StyleRes;
-import android.support.annotation.StyleableRes;
 import android.util.AttributeSet;
 import android.util.Pair;
 import android.view.Choreographer;
@@ -53,9 +48,8 @@ public class WiggleHelper implements View.OnAttachStateChangeListener {
 
     public enum DelayType {
         FRAMES(R.styleable.WiggleHelper_delayFrames, 1) {
-            @NonNull
             @Override
-            protected Frame extractFrameToFixPosition(long delayFrames, @NonNull Deque<Frame> frameDeque) {
+            protected Frame extractFrameToFixPosition(long delayFrames, Deque<Frame> frameDeque) {
                 if (frameDeque.size() > delayFrames) {
                     return frameDeque.pollFirst();
                 }
@@ -63,9 +57,8 @@ public class WiggleHelper implements View.OnAttachStateChangeListener {
             }
         },
         MILLISECONDS(R.styleable.WiggleHelper_delayMillis, 0) {
-            @NonNull
             @Override
-            protected Frame extractFrameToFixPosition(long delayMillis, @NonNull Deque<Frame> frameDeque) {
+            protected Frame extractFrameToFixPosition(long delayMillis, Deque<Frame> frameDeque) {
                 Frame last = frameDeque.getLast();
                 Frame first = frameDeque.getFirst();
                 long diffNanos = Math.abs(first.frameTimeNanos - last.frameTimeNanos);
@@ -77,17 +70,15 @@ public class WiggleHelper implements View.OnAttachStateChangeListener {
             }
         };
 
-        @StyleableRes
         private final int styleableRes;
         private final long defaultValue;
 
-        DelayType(@StyleableRes int styleableRes, long defaultValue) {
+        DelayType(int styleableRes, long defaultValue) {
             this.styleableRes = styleableRes;
             this.defaultValue = defaultValue;
         }
 
-        @NonNull
-        protected abstract Frame extractFrameToFixPosition(long value, @NonNull Deque<Frame> frameDeque);
+        protected abstract Frame extractFrameToFixPosition(long value, Deque<Frame> frameDeque);
     }
 
     private static final Pair<DelayType, Long> DEFAULT_TYPE_AND_VALUE = new Pair<>(DelayType.FRAMES, DelayType.FRAMES.defaultValue);
@@ -99,7 +90,7 @@ public class WiggleHelper implements View.OnAttachStateChangeListener {
 
     private Choreographer.FrameCallback callback;
 
-    private static Pair<DelayType, Long> obtainTypeAndValue(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
+    private static Pair<DelayType, Long> obtainTypeAndValue(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         TypedArray arr = context.obtainStyledAttributes(attrs, R.styleable.WiggleHelper, defStyleAttr, defStyleRes);
         try {
             for (DelayType delayType : DelayType.values()) {
@@ -127,7 +118,7 @@ public class WiggleHelper implements View.OnAttachStateChangeListener {
         this(DEFAULT_TYPE_AND_VALUE);
     }
 
-    public WiggleHelper(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr, @StyleRes int defStyleRes) {
+    public WiggleHelper(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         this(obtainTypeAndValue(context, attrs, defStyleAttr, defStyleRes));
     }
 

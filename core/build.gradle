@@ -22,7 +22,6 @@ dependencies {
     androidTestCompile "com.android.support.test.espresso:espresso-core:${versions.espresso}"
     androidTestCompile "com.android.support.test:runner:${versions.supporttest}"
     androidTestCompile "com.android.support.test:rules:${versions.supporttest}"
-    compile "com.android.support:support-annotations:${versions.support}"
 }
 
 apply from: rootProject.file('bintray-upload-android.gradle')
