@@ -31,8 +31,30 @@ You can use `WiggleFrameLayout` in the same way as `FrameLayout`.
     android:foreground="#80ffffff" />
 ```
 
-Note: `WiggleFrameLayout` uses `translationX` and `translationY`.
+Custom delay duration
+---
+
+`WiggleFrameLayout` supports either `delayFrames` or `delayMillis` XML attributes.
+
+```xml
+<com.github.kubode.wiggle.framelayout.WiggleFrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:foreground="#80ffffff"
+    app:delayMillis="100" />
+```
+
+Default is set to `delayFrames=1`.
+
+Notes
+---
+
+`WiggleFrameLayout` uses `translationX` and `translationY`.
 So you can't use animation of `translationX` and `translationY`.
+
+Core
+---
 
 If you implement wiggle motion yourself using `WiggleHelper`, add dependency `core` rather than `framelayout`.
 
