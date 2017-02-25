@@ -8,12 +8,12 @@ android:
     - tools
     - build-tools-25.0.2
     - android-25
-    - sys-img-armeabi-v7a-android-16
+    - sys-img-armeabi-v7a-android-19
     - extra-android-m2repository
   licenses:
     - 'android-sdk-license-.+'
 before_script:
-  - echo no | android create avd --force -n test -t android-16 --abi armeabi-v7a
+  - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
