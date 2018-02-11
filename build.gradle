@@ -4,10 +4,10 @@ buildscript {
     ext {
         // Note: You should change `.travis.yml` if change SDK versions.
         versions = [
-                compileSdkVersion: 25,
-                buildToolsVersion: '25.0.2',
+                compileSdkVersion: 27,
+                buildToolsVersion: '27.0.3',
                 minSdkVersion    : 16,
-                targetSdkVersion : 25,
+                targetSdkVersion : 27,
                 support          : '24.2.1',
                 espresso         : '2.2.2',
                 supporttest      : '0.5'
